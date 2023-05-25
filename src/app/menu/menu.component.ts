@@ -18,12 +18,10 @@ export class MenuComponent {
     const elemento = document.getElementById('menu')
     if (window.pageYOffset > 0) {
       this.scrolled = true;
-      console.log(elemento)
       this.renderer.addClass(elemento, 'menu2');
       this.renderer.removeClass(elemento, 'menu');
     } else {
       this.scrolled = false;
-      console.log(elemento)
       this.renderer.removeClass(elemento, 'menu2');
       this.renderer.addClass(elemento, 'menu');
     }

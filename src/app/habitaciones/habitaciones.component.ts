@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { Habitacion } from '../interfaces/Habitacion';
-import { ServiciosHabitacionService } from '../services/servicios-habitacion.service';
 
 @Component({
   selector: 'app-habitaciones',
@@ -12,14 +11,8 @@ import { ServiciosHabitacionService } from '../services/servicios-habitacion.ser
 export class HabitacionesComponent {
 
   public habitaciones?:Habitacion[]=[]
-  public fotos?:string[]=[]
-  public constructor(public servicioHabitacion:ServiciosHabitacionService){
+  public constructor(){
    
-    servicioHabitacion.buscarHabitaciones()
-    .subscribe(respuesta=>{
-      console.log(respuesta)
-      this.habitaciones=respuesta
-    })
 
   }
 
